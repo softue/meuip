@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<title>Meu IP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<script>
+function getIP(json) {
+	document.getElementById("userinfo").innerHTML = json.ip
+}
+</script>
+
+<style>
+	* {
+		font-family: 'arial'
+	}
+	
+.center {
+  height: 100%;
+  position: relative;
+}
+
+.center h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center
+}
+
+#userinfo {
+	font-weight: normal
+}
+</style>
+
+<body>
+
+<div class="center">
+<h1>Endereço IP<br><span id="userinfo"></span></h1>
+<div>
+
+</body>
+</html>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP" defer></script>
